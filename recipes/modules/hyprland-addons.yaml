@@ -1,0 +1,21 @@
+modules:
+    - type: dnf
+      repos:
+        copr:
+          enable:
+            - solopasha/hyprland
+      install:
+        install-weak-deps: false
+        packages:
+        - alacritty
+        - hyprland
+        - waybar
+        - xdg-desktop-portal-hyprland
+        - hyprpaper
+        - hyprlock
+        - hypridle
+
+    - type: files
+      files:
+        - source: system/hyprland
+          destination: /
