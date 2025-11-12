@@ -1,0 +1,6 @@
+timeout 300 'swaylock -f'
+timeout 330 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
+before-sleep 'swaylock -f'
+timeout 1800 'systemctl suspend'
+lock 'swaylock -f'
+unlock 'killall -u "$USER" swaylock'
