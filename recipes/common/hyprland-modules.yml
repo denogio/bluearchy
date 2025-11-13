@@ -14,7 +14,8 @@ modules:
         - hyprpaper
         - hyprlock
         - hypridle
-        - hyprland-qtutils       
+        - hyprland-qtutils    
+        - uwsm
 
     - type: files
       files:
