@@ -4,7 +4,12 @@ modules:
         copr:
           enable:
             - chronoscrat/devpod
+        files:
+          - https://packages.microsoft.com/yumrepos/vscode
+        keys:
+          - https://packages.microsoft.com/keys/microsoft.asc
       install:
         install-weak-deps: false
         packages:
         - devpod
+        - code
