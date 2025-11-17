@@ -15,3 +15,4 @@ modules:
   - from-file: common/hyprland-modules.yml
   - from-file: common/final-modules.yml
   - from-file: common/extra-packages.yml
+  - from-file: common/developer-tools.yml
