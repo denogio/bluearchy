@@ -4,10 +4,12 @@ modules:
         copr:
           enable:
             - solopasha/hyprland
+            - scottames/ghostty
       install:
         install-weak-deps: false
         packages:
         - alacritty
+        - ghostty
         - hyprland
         - waybar
         - xdg-desktop-portal-hyprland
