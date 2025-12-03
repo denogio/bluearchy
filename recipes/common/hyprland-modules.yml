@@ -25,7 +25,6 @@ modules:
         copr:
           enable:
 		    - sdegler/hyprland
-
 	  install:
         install-weak-deps: false
         packages:
