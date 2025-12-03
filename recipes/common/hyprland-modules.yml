@@ -25,10 +25,10 @@ modules:
       copr:
         enable:
         - sdegler/hyprland
-      install:
-        install-weak-deps: false
-        packages:
-        - hyprsysteminfo
+    install:
+      install-weak-deps: false
+      packages:
+      - hyprsysteminfo
 
   - type: dnf
     repos:
