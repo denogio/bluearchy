@@ -8,6 +8,16 @@ modules:
         - fcitx5-gtk
         - fcitx5-qt
 
+    - type: dnf
+      repos:
+        copr:
+          enable:
+            - scottames/vicinae
+      install:
+        install-weak-deps: true
+        packages:
+        - vicinae
+
     - type: brew
       nofile-limits: true # increase nofile limits
       brew-analytics: false # disable telemetry
