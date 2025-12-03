@@ -45,8 +45,6 @@ modules:
           - xorg-x11-server-Xwayland
           - headsetcontrol
           - mediainfo
-          - polkit
-          - xfce-polkit 
           - fprintd-pam
           - xdg-user-dirs
           - dbus-tools
