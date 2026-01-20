@@ -8,6 +8,11 @@ modules:
         - fcitx5-gtk
         - fcitx5-qt
 
+    - type: brew
+      nofile-limits: true # increase nofile limits
+      brew-analytics: false # disable telemetry
+
+    # Vicinae Stuff
     - type: dnf
       repos:
         copr:
@@ -18,6 +23,11 @@ modules:
         packages:
         - vicinae
 
-    - type: brew
-      nofile-limits: true # increase nofile limits
-      brew-analytics: false # disable telemetry
+    - type: files
+        files:
+          - usr/lib/environment.d/10-vicinae-path.conf: /usr/lib/environment.d/10-vicinae-path.conf
+
+      - type: systemd
+        user:
+          enabled:
+            - vicinae.service
