@@ -9,10 +9,16 @@ description: bluearchy - the opinionated ublue hyprland distro
 base-image: ghcr.io/ublue-os/base-main
 image-version: 43 # latest is also supported if you want new updates ASAP
 
+# Definer stadiet her
+stages:
+  - from-file: stages/cargo-builder.yml
+    name: cargo-stage
+
 modules:
   - from-file: common/sddm-modules.yml
   - from-file: common/common-modules.yml
   - from-file: common/hyprland-modules.yml
-  - from-file: common/final-modules.yml
-  - from-file: common/extra-packages.yml
   - from-file: common/developer-tools.yml
+  - from-file: common/cargo-binaries.yml
+  - from-file: common/extra-packages.yml
+  - from-file: common/final-modules.yml
