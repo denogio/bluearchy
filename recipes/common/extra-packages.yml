@@ -28,6 +28,8 @@ modules:
       files:
         - source: usr/lib/environment.d/10-home-env.conf
           destination: /usr/lib/environment.d/10-home-env.conf
+        - source: etc/NetworkManager/conf.d/50-iwd.conf
+          destination: /etc/NetworkManager/conf.d/50-iwd.conf
 
     - type: systemd
       user:
