@@ -28,7 +28,7 @@ modules:
         - source: usr/lib/environment.d/10-vicinae-path.conf
           destination: /usr/lib/environment.d/10-vicinae-path.conf
 
-      - type: systemd
-        user:
-          enabled:
-            - vicinae.service
+    - type: systemd
+      user:
+        enabled:
+          - vicinae.service
