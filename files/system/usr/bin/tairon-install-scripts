@@ -9,7 +9,7 @@ command -v gum &> /dev/null || {
     echo "gum not found, using basic output"
 }
 
-TARGET_DIR="$HOME/.local/bin"
+TARGET_DIR="/usr/local/bin"
 SOURCE_DIR="/usr/lib/tairon-scripts"
 
 gum style --foreground 212 "Installing Tairon scripts to $TARGET_DIR..."
