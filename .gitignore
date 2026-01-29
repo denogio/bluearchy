@@ -8,6 +8,7 @@ cosign.private
 .omarchy-scripts/
 .inspiration
 /.bluebuild-scripts_*
+/.bluebuild-scripts_*/
 *.iso
 *CHECKSUM
 *.qcow*
