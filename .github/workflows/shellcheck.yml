@@ -12,7 +12,7 @@ jobs:
         
       - name: Install dependencies
         run: |
-            dnf install -y ShellCheck
+            dnf install -y ShellCheck file
           
       - name: Run ShellCheck
         run: |

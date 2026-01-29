@@ -5,6 +5,12 @@ set -euo pipefail
 echo "🔍 Running ShellCheck on Tairon scripts..."
 echo "=========================================="
 
+# Check if file command is available
+if ! command -v file >/dev/null 2>&1; then
+    echo "❌ Error: 'file' command not found. Please install it."
+    exit 1
+fi
+
 # Find all shell scripts by checking file type (exclude git, node_modules, scripts, and inspiration directories)
 # This catches both .sh files and shell scripts without extensions (like tairon-*)
 SCRIPTS=$(find . -type f -not -path "./.git/*" -not -path "./node_modules/*" -not -path "./scripts/*" -not -path "./.inspiration/*" -exec file {} \; | grep -i "shell script" | cut -d: -f1)
