@@ -233,7 +233,7 @@ show_remove_menu() {
 
 show_update_menu() {
   case $(menu "Update" "󰀻  Tairon\n  Config\n�  System\n󰀲  Firmware") in
-    *Tairon*) tairon-update ;;
+    *Tairon*) terminal -- bash -c "ujust update" ;;
     *Config*) open_in_editor ~/.config/tairon/hyprland.conf ;;
     *System*) show_update_system_menu ;;
     *Firmware*) sudo dnf upgrade --refresh -y ;;

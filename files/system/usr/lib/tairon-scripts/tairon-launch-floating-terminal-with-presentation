@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Launch a floating terminal with the Tairon logo presentation, then execute the command passed in, and finally end with the tairon-show-done presentation.
-# Used by actions such as Update System.
-
-cmd="$*"
-exec setsid uwsm-app -- xdg-terminal-exec --app-id=org.tairon.terminal --title=Tairon -e bash -c "tairon-show-logo; $cmd; if [ \$? -ne 130 ]; then tairon-show-done; fi"
