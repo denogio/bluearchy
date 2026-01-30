@@ -13,7 +13,7 @@ fi
 
 # Find all shell scripts by checking file type (exclude git, node_modules, scripts, and inspiration directories)
 # This catches both .sh files and shell scripts without extensions (like tairon-*)
-SCRIPTS=$(find . -type f -not -path "./.git/*" -not -path "./node_modules/*" -not -path "./scripts/*" -not -path "./.inspiration/*" -exec file {} \; | grep -i "shell script" | cut -d: -f1)
+SCRIPTS=$(find . -type f -not -path "./.git/*" -not -path "./.bluebuild-scripts_**" -not -path "./node_modules/*" -not -path "./scripts/*" -not -path "./.inspiration/*" -exec file {} \; | grep -i "shell script" | cut -d: -f1)
 
 # Run shellcheck on each script
 ISSUES_FOUND=0

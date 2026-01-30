@@ -50,42 +50,42 @@ dev-setup:
     # Create starship config
     mkdir -p ~/.config
     cat > ~/.config/starship.toml << 'EOF'
-# Starship config for Tairon
-add_newline = false
-format = '$directory$git_branch$git_status$character'
+    # Starship config for Tairon
+    add_newline = false
+    format = '$directory$git_branch$git_status$character'
 
-[character]
-success_symbol = '[➜](bold green)'
-error_symbol = '[➜](bold red)'
+    [character]
+    success_symbol = '[➜](bold green)'
+    error_symbol = '[➜](bold red)'
 
-[directory]
-style = 'bold blue'
+    [directory]
+    style = 'bold blue'
 
-[git_branch]
-style = 'bold purple'
+    [git_branch]
+    style = 'bold purple'
 
-[git_status]
-style = 'bold yellow'
-EOF
+    [git_status]
+    style = 'bold yellow'
+    EOF
 
     # Configure bat
     mkdir -p ~/.config/bat
     cat > ~/.config/bat/config << 'EOF'
-# Bat config
---theme=base16
---style=numbers,changes
---wrap=never
-EOF
+    # Bat config
+    --theme=base16
+    --style=numbers,changes
+    --wrap=never
+    EOF
 
     # Configure ripgrep
     mkdir -p ~/.config
     cat > ~/.config/ripgreprc << 'EOF'
-# Ripgrep config
---smart-case
---follow
---hidden
---glob=!.git/*
-EOF
+    # Ripgrep config
+    --smart-case
+    --follow
+    --hidden
+    --glob=!.git/*
+    EOF
 
     echo "Developer environment configured!"
     echo "Open a new terminal for changes to take effect."

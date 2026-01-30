@@ -1,5 +1,9 @@
 alias tairon := tairon-menu
 
+# Open the Tairon main menu
+tairon-menu:
+    tairon-menu
+
 # Tairon system scripts - Essential utilities for Tairon
 # All scripts are installed to ~/.local/bin on first boot via tairon-install-scripts
 
